@@ -5,16 +5,20 @@ class Cell extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: {},
-      showEvent: false
+      hasEvent: false
     }
+    this.addEvent = this.addEvent.bind(this);
+  }
+
+  addEvent() {
+    this.setState({hasEvent:!this.state.hasEvent})
   }
 
   render() {
     const {last, date} = this.props;
     return (
-        <div className={`cell ${last ? "last" : ""}`} onClick={this.showEvent}>
-          {date}
+        <div className={`cell ${last ? "last" : ""} ${this.state.hasEvent ? "event" : ""}`} onClick={this.addEvent}>
+          {date} {this.state.hasEvent ? " - Event" : ""}
         </div>
     )
   }
