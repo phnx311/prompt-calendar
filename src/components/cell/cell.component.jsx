@@ -5,14 +5,17 @@ class Cell extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasEvent: false
+      hasEvent: false,
     }
     this.addEvent = this.addEvent.bind(this);
   }
 
   addEvent() {
-    this.setState({hasEvent:!this.state.hasEvent})
+        if (this.props.date) {
+          this.setState({ hasEvent: !this.state.hasEvent })
+        }
   }
+
 
   render() {
     const {last, date} = this.props;
