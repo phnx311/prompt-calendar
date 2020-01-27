@@ -1,10 +1,22 @@
-Make sure that you have the latest version of node installed on your machine , then in the project directory, you can run:
+## Prompt Calendar
 
-### `npm install`
+The purpose of this project was to mimic the functionality of Google Calendar.
 
-this will create a node modules folder and install needed depenencies
+### The calendar should:
+* render an accurate calendar depending on the month and year selected
 
-To view the calendar and test functionality run
+![](github-images/calendar.png)
+
+* Allow for the creation of Events and access to a event modal to fill in metadata about the event
+
+![](github-images/events.png)
+
+### To Do
+
+* Add Styling and customization options
+* Create Modal for Event Creation
+* Allow drag and drop capability for Events
+* Implement Redux to hold global state
 
 ### `npm start`
 Runs the app in the development mode.<br />
